@@ -1,0 +1,30 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: flex-start;
+  gap: 10%;
+}
+
+.logo {
+  height: 60px;
+  width: 60px;
+}
+
+.logo-img {
+  width: 100%;
+  height: 100%;
+}
+
+.links ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.links ul li {
+  text-decoration: none;
+  list-style: none;
+  color: orange !important;
+}
