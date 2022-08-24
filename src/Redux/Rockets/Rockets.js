@@ -1,9 +1,22 @@
+// Actions
+const ROCKETS_FETCHED = 'ROCKETS_FETCHED';
 
-// get rockets from server
-const url = 'https://api.spacexdata.com/v3/rockets';
+// Actions creators
+export const fetchRocket = (payload) => ({
+  type: ROCKETS_FETCHED,
+  payload,
+});
 
-const fetchRockets = async () => {
-  const data = await fetch(url);
-  const rockets = await data.json();
-  return rockets;
+const initialState = [];
+
+// Reducers
+const rocketsReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case ROCKETS_FETCHED:
+      return action.payload;
+    default:
+      return state;
+  }
 };
+
+export default rocketsReducer;
