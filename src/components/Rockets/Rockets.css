@@ -1,0 +1,26 @@
+.rocket-container {
+  display: grid;
+  grid-template-columns: 1.25fr 3fr;
+
+  /* grid-template-rows: 1fr; */
+  grid-column-gap: 0.5rem;
+  grid-row-gap: 0.5rem;
+  padding: 1rem;
+}
+
+.rocket-image {
+  display: flex;
+  height: 200px;
+  width: 200px;
+}
+
+.r-image {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.name-descr-container {
+  display: flex;
+  flex-direction: column;
+}
