@@ -5,7 +5,7 @@
   justify-content: space-between;
   padding: 0 10%;
   height: 10%;
-  background-color: bisque;
+  border-bottom: 1px solid rgb(201, 199, 199);
 }
 
 .logo-container {
@@ -36,10 +36,13 @@
 }
 
 .links ul li {
-  text-decoration: none;
   list-style: none;
   font-size: large;
   font-weight: 600;
+}
+
+.link-list {
+  text-decoration: none;
   color: blue;
 }
 
