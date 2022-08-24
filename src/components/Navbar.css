@@ -2,14 +2,25 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-items: flex-start;
-  gap: 10%;
+  justify-content: space-between;
+  padding: 0 10%;
+  height: 10%;
+  background-color: bisque;
 }
 
-.logo {
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 5%;
+}
+
+.logo-container img {
   height: 60px;
   width: 60px;
 }
+ .logo-container h1 {
+  white-space: nowrap;
+ }
 
 .logo-img {
   width: 100%;
@@ -26,5 +37,6 @@
 .links ul li {
   text-decoration: none;
   list-style: none;
-  color: orange !important;
+  font-size: large;
+  font-weight: 600;
 }
