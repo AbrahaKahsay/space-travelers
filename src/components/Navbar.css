@@ -40,4 +40,9 @@
   list-style: none;
   font-size: large;
   font-weight: 600;
+  color: blue;
+}
+
+.active {
+  color: red !important;
 }
