@@ -1,9 +1,7 @@
 import React from "react";
 
-const Mission = ()=>{
-    return(
-        <div><p>This mission section</p></div>
-    )
-}
+const Missions = () => (
+    <div><h1>New Missions</h1></div>
+);
 
-export default Mission;
+export default Missions;
