@@ -2,13 +2,25 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-items: flex-start;
-  gap: 10%;
+  justify-content: space-between;
+  padding: 0 10%;
+  height: 10%;
+  border-bottom: 1px solid rgb(201, 199, 199);
 }
 
-.logo {
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 5%;
+}
+
+.logo-container img {
   height: 60px;
   width: 60px;
+}
+
+.logo-container h1 {
+  white-space: nowrap;
 }
 
 .logo-img {
@@ -24,7 +36,16 @@
 }
 
 .links ul li {
-  text-decoration: none;
   list-style: none;
-  color: orange !important;
+  font-size: large;
+  font-weight: 600;
+}
+
+.link-list {
+  text-decoration: none;
+  color: blue;
+}
+
+.active {
+  color: red !important;
 }
