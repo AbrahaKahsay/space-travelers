@@ -2,7 +2,7 @@
 const ROCKETS_FETCHED = 'ROCKETS_FETCHED';
 
 // Actions creators
-export const fetchRocket = (payload) => ({
+const fetchRockets = (payload) => ({
   type: ROCKETS_FETCHED,
   payload,
 });
@@ -18,5 +18,5 @@ const rocketsReducer = (state = initialState, action) => {
       return state;
   }
 };
-
+export { fetchRockets };
 export default rocketsReducer;
