@@ -18,9 +18,10 @@
   height: 60px;
   width: 60px;
 }
- .logo-container h1 {
+
+.logo-container h1 {
   white-space: nowrap;
- }
+}
 
 .logo-img {
   width: 100%;
