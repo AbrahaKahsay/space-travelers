@@ -1,5 +1,6 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import rocketsReducer from './Rockets/Rockets';
+
 const rootReducer = combineReducers({
     Rockets: rocketsReducer,
   });

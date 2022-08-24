@@ -14,7 +14,7 @@ const Rockets = ()=>{
   <div>
     {rockets.map((rocket) => (
     <div key={rocket.id}>
-      <img src={rocket.images[0]} alt="Rocket" />
+      <img src={rocket.images[0]} alt="Rocket image" />
       <div>
         <h2 id={rocket.id}>{rocket.name}</h2>
         <p> {rocket.description}</p>
