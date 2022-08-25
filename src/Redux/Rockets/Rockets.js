@@ -1,16 +1,24 @@
 // Actions
 const ROCKETS_FETCHED = 'ROCKETS_FETCHED';
 const ROCKETS_RESERVED = 'ROCKETS_RESERVED';
+const ROCKETS_CANCELLED = 'ROCKETS_CANCELLED';
 
 // Actions creators
 const fetchRockets = (payload) => ({
   type: ROCKETS_FETCHED,
   payload,
 });
+
 const reserveRocket = (id) => ({
   type: ROCKETS_RESERVED,
   id,
 });
+
+const cancelRocket = (id) => ({
+  type: ROCKETS_CANCELLED,
+  id,
+});
+
 
 const initialState = [];
 let newState;
@@ -21,12 +29,12 @@ const rocketsReducer = (state = initialState, action) => {
     case ROCKETS_FETCHED:
       return action.payload;
     case ROCKETS_RESERVED:
-      newState = state.map((rocket) => {
-        if(rocket.id !==action.id){
+      newState = state.map((rock) => {
+        if(rock.id !==action.id){
           return rokt;
         }
         else {
-          return {...rocket, reserved:true};
+          return {...rock, reserved:true};
         }
       })
       return newState;
