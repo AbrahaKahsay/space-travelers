@@ -29,9 +29,10 @@ const rocketsReducer = (state = initialState, action) => {
           return {...rocket, reserved:true};
         }
       })
+      return newState;
     default:
       return state;
   }
 };
-export { fetchRockets };
+export { fetchRockets, reserveRocket };
 export default rocketsReducer;
