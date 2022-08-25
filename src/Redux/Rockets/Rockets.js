@@ -13,12 +13,22 @@ const reserveRocket = (id) => ({
 });
 
 const initialState = [];
+let newState;
 
 // Reducers
 const rocketsReducer = (state = initialState, action) => {
   switch (action.type) {
     case ROCKETS_FETCHED:
       return action.payload;
+    case ROCKETS_RESERVED:
+      newState = state.map((rocket) => {
+        if(rocket.id !==action.id){
+          return rokt;
+        }
+        else {
+          return {...rocket, reserved:true};
+        }
+      })
     default:
       return state;
   }
