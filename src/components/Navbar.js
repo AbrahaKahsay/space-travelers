@@ -1,21 +1,48 @@
-import './Navbar.css';
+import * as React from 'react';
 import { NavLink } from 'react-router-dom';
-import Logo from '../components/planet.png';
+import logo from '../assets/images/planet.png';
+import './styles/Navbar.css';
 
-const Navbar = () => (
-    <nav className="navbar">
-        <div className='logo-container'>
-            <div><img className='logo' src={Logo} alt="Logo" /></div>
-            <h1>{ "Space Travelers' Hub"} </h1>
+const Navbar = () => {
+  const activeClassName = 'underline';
+  return (
+    <section className="nav">
+      <div className="logo">
+        <div className="logo-container">
+          <img src={logo} alt="planet" className="logo-container-img" />
+          <p> Space Traveler&rsquo;s Hub</p>
         </div>
-        <div className="links">
-           <ul>
-            <li><NavLink className="link-list" to="/">Rockets</NavLink></li>
-            <li><NavLink className="link-list" to="/mission">Mission</NavLink></li>
-            <li><NavLink className="link-list" to="/profile">My Profile</NavLink></li>
-           </ul> 
-        </div>
-    </nav>
-);
+      </div>
+      <nav className="nav-container">
+        <ul className="nav-container-items">
+          <li>
+            <NavLink
+              to="/rockets"
+              className={({ isActive }) => (isActive ? activeClassName : undefined)}
+            >
+              Rockets
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/missions"
+              className={({ isActive }) => (isActive ? activeClassName : undefined)}
+            >
+              Missions
+            </NavLink>
+          </li>
+          <li className="profile">
+            <NavLink
+              to="/profile"
+              className={({ isActive }) => (isActive ? activeClassName : undefined)}
+            >
+              My Profiles
+            </NavLink>
+          </li>
+        </ul>
+      </nav>
+    </section>
+  );
+};
 
 export default Navbar;
