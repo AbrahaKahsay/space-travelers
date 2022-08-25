@@ -31,16 +31,22 @@ const rocketsReducer = (state = initialState, action) => {
     case ROCKETS_RESERVED:
       newState = state.map((rock) => {
         if(rock.id !==action.id){
-          return rokt;
+          return rock;
         }
         else {
           return {...rock, reserved:true};
         }
       })
       return newState;
+      case ROCKETS_CANCELLED:
+        newState = state.map((rock) => {
+          if (rock.id !== action.id) return rock;
+          return { ...rock, reserved: false };
+        });
+        return newState;
     default:
       return state;
   }
 };
-export { fetchRockets, reserveRocket };
+export { fetchRockets, reserveRocket, cancelRocket };
 export default rocketsReducer;

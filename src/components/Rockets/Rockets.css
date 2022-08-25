@@ -24,3 +24,29 @@
   display: flex;
   flex-direction: column;
 }
+
+.res-btn {
+  width: 150px;
+  height: 30px;
+  background-color: blue;
+  border-style: none;
+  color: white;
+  border-radius: 4px;
+}
+
+.canc-btn {
+  width: 150px;
+  height: 30px;
+  color: gray;
+  border-radius: 4px;
+}
+
+.badge {
+  width: 70px;
+  height: 20px;
+  background-color: rgb(70, 200, 240);
+  border-style: none;
+  color: white;
+  margin-right: 5px;
+  border-radius: 5px;
+}
