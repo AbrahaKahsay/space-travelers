@@ -1,37 +1,65 @@
-// import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-// import axios from 'axios';
-// import 'bootstrap/dist/css/bootstrap.min.css';
+// Actions
+const SPACE_MISSIONS = 'SPACE_MISSIONS';
+const MISSIONS_RESERVED = 'MISSIONS_RESERVED';
+const MISSIONS_CANCELLED = 'MISSIONS_CANCELLED';
 
-// const initialState = [];
+const url = 'https://api.spacexdata.com/v3/missions/';
 
-// export const fetchingMissionspi = createAsyncThunk('fetching from missions api', async () => {
-//   const fetchedMissions = await axios.get('https://api.spacexdata.com/v3/missions').catch((err) => err);
-//   const missionData = fetchedMissions.data;
-//   const fetchedEachMission = missionData.map((mission) => ({
-//     id: mission.mission_id,
-//     mission_name: mission.mission_name,
-//     description: mission.description,
-//     join: false,
-//   }));
-//   return fetchedEachMission;
-// });
-// const missionsSlice = createSlice({
-//   name: 'missions',
-//   initialState,
-//   reducers: {
-//     joinMission: (state, action) => state.map((mission) => {
-//       if (mission.id === action.payload) {
-//         return { ...mission, join: !mission.join };
-//       }
-//       return mission;
-//     }),
+export const fetchMissions = () => async (dispatch) => {
+    const data = await fetch(url);
+    const response = await data.json();
+    dispatch(
+        getMissions(
+            response.map((mission) => ({
+                id: mission.mission_id,
+                name: mission.mission_name,
+                description: mission.description,
+                reserved: false,
+            })),
+        ),
+    );
+};
 
-//   },
-//   extraReducers: {
-//     [fetchingMissionspi.fulfilled]: (state, action) => action.payload,
+// Action creators
+export const reserveMission = (id) => ({
+    type: MISSIONS_RESERVED,
+    id,
+});
 
-//   },
-// });
+export const cancelMission = (id) => ({
+    type: MISSIONS_CANCELLED,
+    id,
+});
 
-// export const { joinMission } = missionsSlice.actions;
-// export default missionsSlice.reducer;
+export const getMissions = (missions) => ({
+    type: SPACE_MISSIONS,
+    missions,
+});
+
+const initialState = [];
+let resState;
+// reducer
+const missionsReducer = (state = initialState, action) => {
+    switch (action.type) {
+        case SPACE_MISSIONS:
+            return action.missions;
+
+        case MISSIONS_RESERVED:
+            resState = state.map((item) => {
+                if (item.id !== action.id) return item;
+                return { ...item, reserved: true };
+            });
+            return resState;
+        case MISSIONS_CANCELLED:
+            resState = state.map((item) => {
+                if (item.id !== action.id) return item;
+                return { ...item, reserved: false };
+            });
+            return resState;
+
+        default:
+            return state;
+    }
+};
+
+export default missionsReducer;
