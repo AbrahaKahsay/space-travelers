@@ -3,6 +3,20 @@ const ROCKETS_FETCHED = 'ROCKETS_FETCHED';
 const ROCKETS_RESERVED = 'ROCKETS_RESERVED';
 const ROCKETS_CANCELLED = 'ROCKETS_CANCELLED';
 
+// get rockets from server
+const url = 'https://api.spacexdata.com/v3/rockets';
+
+const fetchRocketsFromServer = async (dispatch) => {
+  const data = await fetch(url);
+  const rockets = await data.json();
+  dispatch(fetchRockets(rockets.map((rocket) => ({
+    id: rocket.id,
+    name: rocket.rocket_name,
+    description: rocket.description,
+    images: rocket.flickr_images,
+  }))));
+};
+
 // Actions creators
 const fetchRockets = (payload) => ({
   type: ROCKETS_FETCHED,
@@ -48,5 +62,5 @@ const rocketsReducer = (state = initialState, action) => {
       return state;
   }
 };
-export { fetchRockets, reserveRocket, cancelRocket };
+export { fetchRocketsFromServer, reserveRocket, cancelRocket };
 export default rocketsReducer;
