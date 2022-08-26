@@ -12,8 +12,8 @@ const Profile = () => {
     <>
     <table className='container'>
         <tr>
-            <th><h2>My Missions</h2></th>
-            <th><h2>My Rockets</h2></th>
+            <th><h3>My Missions</h3></th>
+            <th><h3>My Rockets</h3></th>
         </tr>
         <tr>
         <td>
