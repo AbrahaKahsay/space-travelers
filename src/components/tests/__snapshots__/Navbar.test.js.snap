@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Jest Snapshot testing suite Matches DOM Snapshot 1`] = `
+<nav
+  class="navbar"
+>
+  <div
+    class="logo-container"
+  >
+    <div>
+      <img
+        alt="Logo"
+        class="logo"
+        src="planet.png"
+      />
+    </div>
+    <h1>
+      Space Travelers' Hub
+       
+    </h1>
+  </div>
+  <div
+    class="links"
+  >
+    <ul>
+      <li>
+        <a
+          aria-current="page"
+          class="link-list active"
+          href="/"
+        >
+          Rockets
+        </a>
+      </li>
+      <li>
+        <a
+          class="link-list"
+          href="/mission"
+        >
+          Missions
+        </a>
+      </li>
+      <li>
+        <a
+          class="link-list"
+          href="/profile"
+        >
+          My Profile
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+`;

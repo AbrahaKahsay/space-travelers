@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Jest Snapshot testing suite Matches DOM Snapshot 1`] = `
+<table
+  class="container"
+>
+  <tr>
+    <th>
+      <h2>
+        My Missions
+      </h2>
+    </th>
+    <th>
+      <h2>
+        My Rockets
+      </h2>
+    </th>
+  </tr>
+  <tr>
+    <td />
+    <td />
+  </tr>
+</table>
+`;
