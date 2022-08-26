@@ -13,7 +13,7 @@ const Missions = () => {
   }, [dispatch]);
 
   return (
-    <table className="all-container" cellspacing="0">
+    <table className="all-container" cellSpacing="0">
       <thead className="table-head">
         <tr>
           <th>Mission</th>
