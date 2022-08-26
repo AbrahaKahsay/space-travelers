@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import './Mission.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchMissions, reserveMission, cancelMission } from '../../Redux/Mission/Mission';
 
@@ -12,7 +13,7 @@ const Missions = () => {
   }, [dispatch]);
 
   return (
-    <table className="table">
+    <table className="all-container" cellspacing="0">
       <thead className="table-head">
         <tr>
           <th>Mission</th>
@@ -23,7 +24,7 @@ const Missions = () => {
           </th>
         </tr>
       </thead>
-      <tbody className="table-body">
+      <tbody>
         {missions.map((mission) => (
           <tr key={mission.id}>
             <td>{mission.name}</td>

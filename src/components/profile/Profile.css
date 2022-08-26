@@ -1,26 +1,26 @@
 .container {
-    width: 80%;
-    justify-content: center;
-    margin: 0.5rem 6rem;
-    border-spacing:30px 0px;
-  }
-  
-  .container td,
-  .container th {
-    width: 50%;
-    text-align: left;
-  }
-  
-  .container tr:nth-child(even) {
-    background-color: #f2f2f2;
-  }
-  
-  .container th {
-    padding-top: 5px;
-    padding-bottom: 5px;
-  }
-  
-  .rockets,
-  .missions {
-      padding: 0.25rem 2rem;
-  }
+  width: 80%;
+  justify-content: center;
+  margin: 0.5rem 6rem;
+  border-spacing: 30px 0;
+}
+
+.container td,
+.container th {
+  width: 50%;
+  text-align: left;
+}
+
+.container tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.container th {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.rockets,
+.missions {
+  padding: 0.25rem 2rem;
+}

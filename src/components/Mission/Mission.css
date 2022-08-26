@@ -1,0 +1,65 @@
+.all-container {
+  width: 90%;
+  border: 1px solid #6A6C6E;
+  border-radius: 0.1rem;
+  margin: 1rem 0 0 3rem;
+  border-collapse: collapse;
+ 
+}
+
+tbody tr:nth-child(odd) {
+  background-color: lightgray;
+  color: black;
+}
+
+.all-container tbody,
+tbody td,
+tbody th {
+  border: 1px solid gray;
+  border-spacing: 0;
+}
+
+thead tr th {
+    border: 1px solid gray;
+}
+
+.leaveMission,
+.joinMission {
+  background-color: transparent;
+  width: max-content;
+  padding: 0.3rem;
+  border: 1.5px solid gray;
+  margin: 1rem;
+  border-radius: 0.3rem;
+}
+
+.activeMember,
+.notMember {
+  display: inline-block;
+  width: max-content;
+  border: none;
+  margin: 0.8rem;
+  padding: 0.2rem;
+  color: white;
+  font-size: 12px;
+  font-weight: 400;
+  border-radius: 0.3rem;
+}
+
+.notMember {
+  background-color: gray;
+}
+
+.activeMember {
+  background-color: rgb(49, 143, 219);
+}
+
+.leaveMission {
+  border: 1px solid red;
+  color: red;
+}
+
+.joinMission {
+  border: 1px solid gray;
+  color: gray;
+}
