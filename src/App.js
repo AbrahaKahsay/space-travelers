@@ -1,13 +1,13 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Rockets from './components/pages/Rockets';
-import Missions from './components/pages/Missions';
-import MyProfile from './components/pages/MyProfile';
+import Navbar from './components/Navbar.js';
+import Rockets from './components/Rocket/Rockets';
+import Missions from './components/Mission/Missions';
+import MyProfile from './components/Profile/Profile';
 
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
+      <Navbar />pages
       <Routes>
         <Route index element={<Rockets />} />
         <Route path="/rockets" element={<Rockets />} />
