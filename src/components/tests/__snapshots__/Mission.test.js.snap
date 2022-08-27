@@ -3,7 +3,7 @@
 exports[`Jest Snapshot testing suite Matches DOM Snapshot 1`] = `
 <table
   cellspacing="0"
-  class="table"
+  class="all-container"
 >
   <thead
     class="table-head"
@@ -24,7 +24,7 @@ exports[`Jest Snapshot testing suite Matches DOM Snapshot 1`] = `
     </tr>
   </thead>
   <tbody
-    class="table-body"
+    class="miss-tbody"
   />
 </table>
 `;

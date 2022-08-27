@@ -2,23 +2,25 @@
 
 exports[`Jest Snapshot testing suite Matches DOM Snapshot 1`] = `
 <table
-  class="container"
+  class="cont"
 >
-  <tr>
-    <th>
-      <h2>
-        My Missions
-      </h2>
-    </th>
-    <th>
-      <h2>
-        My Rockets
-      </h2>
-    </th>
-  </tr>
-  <tr>
-    <td />
-    <td />
-  </tr>
+  <tbody>
+    <tr>
+      <th>
+        <h3>
+          My Missions
+        </h3>
+      </th>
+      <th>
+        <h3>
+          My Rockets
+        </h3>
+      </th>
+    </tr>
+    <tr>
+      <td />
+      <td />
+    </tr>
+  </tbody>
 </table>
 `;
