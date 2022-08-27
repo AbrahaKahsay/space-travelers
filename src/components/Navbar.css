@@ -1,0 +1,51 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  height: 10%;
+  border-bottom: 1px solid rgb(201, 199, 199);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 5%;
+}
+
+.logo-container img {
+  height: 60px;
+  width: 60px;
+}
+
+.logo-container h1 {
+  white-space: nowrap;
+}
+
+.logo-img {
+  width: 100%;
+  height: 100%;
+}
+
+.links ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.links ul li {
+  list-style: none;
+  font-size: large;
+  font-weight: 600;
+}
+
+.link-list {
+  text-decoration: none;
+  color: blue;
+}
+
+.active {
+  color: red !important;
+}

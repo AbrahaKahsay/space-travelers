@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Body of the whole Rocket Page It should matchsnapshot 1`] = `
+Array [
+  <nav
+    className="navbar"
+  >
+    <div
+      className="logo-container"
+    >
+      <div>
+        <img
+          alt="Logo"
+          className="logo"
+          src="planet.png"
+        />
+      </div>
+      <h1>
+        Space Travelers' Hub
+         
+      </h1>
+    </div>
+    <div
+      className="links"
+    >
+      <ul>
+        <li>
+          <a
+            aria-current="page"
+            className="link-list active"
+            href="/"
+            onClick={[Function]}
+          >
+            Rockets
+          </a>
+        </li>
+        <li>
+          <a
+            className="link-list"
+            href="/mission"
+            onClick={[Function]}
+          >
+            Missions
+          </a>
+        </li>
+        <li>
+          <a
+            className="link-list"
+            href="/profile"
+            onClick={[Function]}
+          >
+            My Profile
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>,
+  <div />,
+]
+`;
