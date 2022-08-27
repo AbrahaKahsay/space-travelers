@@ -6,20 +6,20 @@
   border-collapse: collapse;
 }
 
-tbody tr:nth-child(odd) {
+thead tr th {
+  border: 1px solid gray;
+}
+
+.miss-tbody tr:nth-child(odd) {
   background-color: lightgray;
   color: black;
 }
 
 .all-container tbody,
-tbody td,
-tbody th {
+.miss-tbody td,
+.miss-tbody th {
   border: 1px solid gray;
   border-spacing: 0;
-}
-
-thead tr th {
-  border: 1px solid gray;
 }
 
 .leaveMission,

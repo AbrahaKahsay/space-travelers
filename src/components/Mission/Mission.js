@@ -24,7 +24,7 @@ const Missions = () => {
                     </th>
                 </tr>
             </thead>
-            <tbody className="table-body">
+            <tbody className="miss-tbody">
                 {missions.map((mission) => (
                     <tr key={mission.id}>
                         <td>{mission.name}</td>
